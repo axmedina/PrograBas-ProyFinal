@@ -21,5 +21,5 @@ int main() {
 void header() {
 	/*Esta func imprime texto en la parte superior de la pantalla
 	La uso para simular la permanencia de un elemento de cabecera en la interfaz de usuario cada vez que se limpie la consola*/
-	cout << "\t\t\tCONSORCIO FERRETERO MEDINA S.A. de C.V.";
+	cout << "\tCONSORCIO FERRETERO MEDINA S.A. de C.V.\n\tSucursal López Mateos - Tel: (828) 284 64 24\n\twww.grupomedina.mx\n";
 }
