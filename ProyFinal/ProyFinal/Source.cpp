@@ -8,12 +8,14 @@
 using namespace std;
 
 void header();
+int opc_menup;
 
 int main() {
 
 	setlocale(LC_ALL, "spanish"); //Permite usar acentos del español
 	system("cls");
 	header();
+	cout << "\n\n\tMENU PRINCIPAL";
 	system("pause>nul");
 	return 0;
 }
