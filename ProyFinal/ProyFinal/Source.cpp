@@ -26,7 +26,7 @@ int main() {
 		system("cls");
 		header();
 		cout << "\n\n\tMENU PRINCIPAL";
-		cout << "\n\n\t1 - VENTA de productos\n\t2 - EDITAR productos\n\t3 - MOSTRAR productos\n\t4 - SALIR del sistema";
+		cout << "\n\n\t1 - VENTA de productos\n\t2 - EDITAR producto\n\t3 - MOSTRAR productos\n\t4 - SALIR del sistema";
 		cout << "\n\n\tIngrese una opción   ";
 		cin >> opc_menu_p; 			//scanf_s("%c", &opc_menu_p, 1);     Antes quería usar esta instruccion pero me decidi por usar cin
 
