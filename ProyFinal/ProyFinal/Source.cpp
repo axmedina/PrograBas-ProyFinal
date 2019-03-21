@@ -19,6 +19,12 @@ bool	volver_menu_p = false,
 		repetir_venta,repetir_edit, repetir_muestra,
 		salir;
 
+struct registro{
+	int codigo;
+	char nombre[50];
+	float precio_unit;
+}datos[150];
+
 int main() {
 	setlocale(LC_ALL, "spanish"); //Permite usar acentos del español
 	do {
@@ -26,7 +32,7 @@ int main() {
 		system("cls");
 		header();
 		cout << "\n\n\tMENU PRINCIPAL";
-		cout << "\n\n\t1 - VENTA de productos\n\t2 - EDITAR producto\n\t3 - MOSTRAR productos\n\t4 - SALIR del sistema";
+		cout << "\n\n\t[1] - VENTA de productos\n\t[2] - EDITAR producto\n\t[3] - MOSTRAR productos\n\t[4] - SALIR del sistema";
 		cout << "\n\n\tIngrese una opción   ";
 		cin >> opc_menu_p; 			//scanf_s("%c", &opc_menu_p, 1);     Antes quería usar esta instruccion pero me decidi por usar cin
 
@@ -39,7 +45,7 @@ int main() {
 				system("cls");
 				header();
 				cout << "\n\n\tMENU PRINCIPAL";
-				cout << "\n\n\t1 - VENTA de productos\n\t2 - EDITAR productos\n\t3 - MOSTRAR productos\n\t4 - SALIR del sistema";
+				cout << "\n\n\t[1] - VENTA de productos\n\t[2] - EDITAR productos\n\t[3] - MOSTRAR productos\n\t[4] - SALIR del sistema";
 				cout << "\n\n\tIngrese una opción VÁLIDA  ";
 				is_ok_menu_p = false;
 				cin.ignore(30, '\n');
