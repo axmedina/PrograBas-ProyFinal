@@ -11,11 +11,11 @@ void	header();
 bool	isNumero(char);
 
 char	opc_menu_p,
-		opc_menu_venta, opc_menu_edit, opc_menu_muestra,
+		opc_menu_venta, opc_menu_edit, opc_menu_muestra, opc_submenu_editar,
 		escape;
 
 bool	volver_menu_p = false,
-		is_ok_menu_p = false,
+		is_ok_menu_p = false, is_ok_submenu_editar = false,
 		repetir_venta,repetir_edit, repetir_muestra,
 		salir;
 
@@ -53,7 +53,7 @@ int main() {
 
 			}
 			
-		} while (is_ok_menu_p == false);
+		} while (!is_ok_menu_p);
 
 
 		switch (opc_menu_p) {
@@ -79,7 +79,19 @@ int main() {
 					system("cls");
 					header();
 					cout << "\n\n\tEDICIÓN DE PRODUCTOS\n";
-					cout << "\tfoo\n";
+					cout << "\n\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\n\tTeclee una opción   ";
+					cin >> opc_submenu_editar;
+
+					do{
+						if (isNumero(opc_submenu_editar)) {
+							is_ok_submenu_editar = true;
+						}
+						else {
+							is_ok_submenu_editar = false;
+						}
+						cout <<
+					}
+
 					cout << "\n\tIngrese 1 para editar otro producto\n\tIngrese otra cosa para volver al menú principal   ";
 					cin >> opc_menu_edit;
 					if (opc_menu_edit == 49)
