@@ -8,7 +8,13 @@
 using namespace std;
 
 void	header();
+void	cls();
 bool	isNumero(char);
+/*void	venta();
+void	add();
+void	edit();
+void	remove();
+void	list();*/
 
 char	opc_menu_p,
 		opc_menu_venta, opc_menu_edit, opc_menu_muestra, opc_submenu_editar,
@@ -20,16 +26,16 @@ bool	volver_menu_p = false,
 		salir;
 
 struct registro{
-	int codigo;
+	char codigo[8];
 	char nombre[50];
 	float precio_unit;
-}datos[150];
+	int exist;
+}prod[150];
 
 int main() {
 	setlocale(LC_ALL, "spanish"); //Permite usar acentos del español
 	do {
-
-		system("cls");
+		cls();
 		header();
 		cout << "\n\n\tMENU PRINCIPAL";
 		cout << "\n\n\t[1] - VENTA de productos\n\t[2] - EDITAR producto\n\t[3] - MOSTRAR productos\n\t[4] - SALIR del sistema";
@@ -42,7 +48,7 @@ int main() {
 				is_ok_menu_p = true;
 			}
 			else {
-				system("cls");
+				cls();
 				header();
 				cout << "\n\n\tMENU PRINCIPAL";
 				cout << "\n\n\t[1] - VENTA de productos\n\t[2] - EDITAR productos\n\t[3] - MOSTRAR productos\n\t[4] - SALIR del sistema";
@@ -57,9 +63,9 @@ int main() {
 
 
 		switch (opc_menu_p) {
-			case 49: {
+			case 49: { //PUNTO DE VENTA
 				do {
-					system("cls");
+					cls();
 					header();
 					cout << "\n\n\tVENTA DE PRODUCTOS\n";
 					cout << "\tfoo\n";
@@ -74,24 +80,38 @@ int main() {
 				} while (repetir_venta);
 				break;
 			}
-			case 50: {
+			case 50: { //EDICION DE PRODUCTOS 
 				do {
-					system("cls");
+					cls();
 					header();
 					cout << "\n\n\tEDICIÓN DE PRODUCTOS\n";
 					cout << "\n\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\n\tTeclee una opción   ";
 					cin >> opc_submenu_editar;
-
 					do{
 						if (isNumero(opc_submenu_editar)) {
 							is_ok_submenu_editar = true;
 						}
 						else {
 							is_ok_submenu_editar = false;
+							cls();
+							header();
+							cout << "\n\n\tEDICIÓN DE PRODUCTOS\n";
+							cout << "\n\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\n\tTeclee una opción VÁLIDA   ";
+							cin >> opc_submenu_editar;
 						}
-						cout <<
+					} while (!(is_ok_submenu_editar);
+					switch (opc_submenu_editar) {
+						case '1': { //ADD
+							cls();
+							break;
+						}
+						case'2': { //EDIT
+							break;
+						}
+						case'3': { //REMOVE
+							break;
+						} .
 					}
-
 					cout << "\n\tIngrese 1 para editar otro producto\n\tIngrese otra cosa para volver al menú principal   ";
 					cin >> opc_menu_edit;
 					if (opc_menu_edit == 49)
@@ -105,7 +125,7 @@ int main() {
 			}
 			case 51: {
 				do {
-					system("cls");
+					cls();
 					header();
 					cout << "\n\n\tMUESTRA DE PRODUCTOS\n";
 					cout << "\tfoo\n";
@@ -122,7 +142,7 @@ int main() {
 			}
 			case 52: { //SALIR
 				volver_menu_p = false;
-				system("cls");
+				cls();
 				cout << "\n\n\tSaliendo del sistema . . .\n\n\tPresione cualquier tecla.";
 				system("pause>nul");
 				break;
@@ -148,4 +168,8 @@ void header() {
 	/*Esta func imprime texto en la parte superior de la pantalla
 	La uso para simular la permanencia de un elemento de cabecera en la interfaz de usuario cada vez que se limpie la consola*/
 	cout << "\t\t\tCONSORCIO FERRETERO MEDINA S.A. de C.V.\n\t\t\tSucursal López Mateos\n\t\t\tTel: (828) 284 64 24\n\t\t\t\www.grupomedina.mx\n";
+}
+
+void cls() {
+	system("cls");
 }
