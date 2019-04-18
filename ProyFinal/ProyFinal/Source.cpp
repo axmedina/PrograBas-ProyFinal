@@ -27,7 +27,7 @@ bool	volver_menu_p = false,
 
 ////////////
 
-//////////
+///////////
 struct registro{
 	char codigo[8];
 	char nombre[50];
@@ -173,7 +173,7 @@ int main() {
 			} while (repetir_edit);
 			break;
 		}
-		case 51: { //MUESTRA DE PRODUCTOS AAAAAAAAAAAAAAAAAAA
+		case 51: { //MUESTRA DE PRODUCTOS AAAAAAAAAAAAAAAA
 			do {
 				cls();
 				header();
