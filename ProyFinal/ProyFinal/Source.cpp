@@ -42,7 +42,7 @@ int main() {
 		header();
 		cout << "\n\n\tMENU PRINCIPAL";
 		cout << "\n\n\t[1] - VENTA de productos\n\t[2] - EDITAR productos\n\t[3] - MOSTRAR productos\n\t[4] - SALIR del sistema";
-		cout << "\n\n\tIngrese una opciÃ³n   ";
+		cout << "\n\n\tIngrese una opción   ";
 		cin >> opc_menu_p; 			//scanf_s("%c", &opc_menu_p, 1);     Antes querÃ­a usar esta instruccion pero me decidi por usar cin
 		
 		do {
@@ -55,7 +55,7 @@ int main() {
 				header();
 				cout << "\n\n\tMENU PRINCIPAL";
 				cout << "\n\n\t[1] - VENTA de productos\n\t[2] - EDITAR productos\n\t[3] - MOSTRAR productos\n\t[4] - SALIR del sistema";
-				cout << "\n\n\tIngrese una opciÃ³n VÃLIDA  ";
+				cout << "\n\n\tIngrese una opcion valida  ";
 				is_ok_menu_p = false;
 				cin.ignore(100, '\n');
 				cin >> opc_menu_p;
@@ -71,7 +71,7 @@ int main() {
 				header();
 				cout << "\n\n\tVENTA DE PRODUCTOS\n";
 				cout << "\tfoo\n";
-				cout << "\n\tIngrese 1 para procesar una nueva compra\n\tIngrese otra cosa para volver al menÃº principal   ";
+				cout << "\n\tIngrese 1 para procesar una nueva compra\n\tIngrese otra cosa para volver al menú principal   ";
 				cin >> opc_menu_venta;
 				if (opc_menu_venta == 49)
 					repetir_venta = true;
@@ -86,8 +86,8 @@ int main() {
 			do {
 				cls();
 				header();
-				cout << "\n\n\tEDICIÃ“N DE PRODUCTOS\n";
-				cout << "\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\t[4] - Regresar\n\n\tIngrese una opciÃ³n   ";
+				cout << "\n\n\tEDICIóN DE PRODUCTOS\n";
+				cout << "\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\t[4] - Regresar\n\n\tIngrese una opción   ";
 				cin >> opc_submenu_editar;
 				do{
 					if (isNumero(opc_submenu_editar) && ((opc_submenu_editar > 48) && (opc_submenu_editar < 53))) {
@@ -97,8 +97,8 @@ int main() {
 						is_ok_submenu_editar = false;
 						cls();
 						header();
-						cout << "\n\n\tEDICIÃ“N DE PRODUCTOS\n";
-						cout << "\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\t[4] - Regresar\n\n\tIngrese una opciÃ³n VÃLIDA   ";
+						cout << "\n\n\tEDICIóN DE PRODUCTOS\n";
+						cout << "\n\t[1] - AGREGAR PRODUCTO\n\t[2] - EDITAR PRODUCTO\n\t[3] - ELIMINAR PRODUCTO\n\t[4] - Regresar\n\n\tIngrese una opcion valida   ";
 						cin >> opc_submenu_editar;
 					}
 				} while (!(is_ok_submenu_editar));
@@ -113,9 +113,9 @@ int main() {
 						do{
 							cls();
 							header();						
-							cout << "\n\n\tAÃ±adir #" << contadorpendejo << endl;
+							cout << "\n\n\tAñadir #" << contadorpendejo << endl;
 							contadorpendejo++;
-							cout << "\tDesea repetir este menÃº inservible?\n\tIngrese 1	";
+							cout << "\tDesea repetir este menú inservible?\n\tIngrese 1	";
 							cin >> repetir_submenu_edit;
 							if (repetir_submenu_edit == 49){
 								repetir_sub_edit = true;
@@ -133,7 +133,7 @@ int main() {
 							header();
 							cout << "\n\n\tEditar #" << contadorpendejo << endl;
 							contadorpendejo++;
-							cout << "\tDesea repetir este menÃº inservible?\n\tIngrese 1	";
+							cout << "\tDesea repetir este menú inservible?\n\tIngrese 1	";
 							cin >> repetir_submenu_edit;
 							if (repetir_submenu_edit == 49){
 								repetir_sub_edit = true;
@@ -151,7 +151,7 @@ int main() {
 							header();
 							cout << "\n\n\tEliminar #" << contadorpendejo << endl;
 							contadorpendejo++;
-							cout << "\tDesea repetir este menÃº inservible?\n\tIngrese 1	";
+							cout << "\tDesea repetir este menú inservible?\n\tIngrese 1	";
 							cin >> repetir_submenu_edit;
 							if (repetir_submenu_edit == 49){
 								repetir_sub_edit = true;
@@ -179,7 +179,7 @@ int main() {
 				header();
 				cout << "\n\n\tMUESTRA DE PRODUCTOS\n";
 				cout << "\tfoo\n";
-				cout << "\n\tIngrese 1 para mostrar prod. de nuevo\n\tIngrese otra cosa para volver al menÃº principal   ";
+				cout << "\n\tIngrese 1 para mostrar prod. de nuevo\n\tIngrese otra cosa para volver al menú principal   ";
 				cin >> opc_menu_muestra;
 				if (opc_menu_muestra == 49)
 					repetir_muestra = true;
@@ -217,7 +217,7 @@ bool isNumero(char carac) {
 void header() {
 	/*Esta func imprime texto en la parte superior de la pantalla
 	La uso para simular la permanencia de un elemento de cabecera en la interfaz de usuario cada vez que se limpie la consola*/
-	cout << "\t\t\tCONSORCIO FERRETERO MEDINA S.A. de C.V.\n\t\t\tSucursal LÃ³pez Mateos\n\t\t\tTel: (828) 284 64 24\n\t\t\twww.grupomedina.mx\n";
+	cout << "\t\t\tCONSORCIO FERRETERO MEDINA S.A. de C.V.\n\t\t\tSucursal López Mateos\n\t\t\tTel: (828) 284 64 24\n\t\t\twww.grupomedina.mx\n";
 }
 
 void cls() {
